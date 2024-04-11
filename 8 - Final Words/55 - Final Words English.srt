@@ -1,0 +1,32 @@
+﻿1
+00:00:10,130 --> 00:00:11,010
+‫Congratulations.
+
+2
+00:00:11,030 --> 00:00:11,540
+‫You did it.
+
+3
+00:00:11,900 --> 00:00:17,210
+‫I hope this class met your expectations and you were able to practice all the techniques from this lesson.
+
+4
+00:00:18,050 --> 00:00:23,150
+‫Now you have all necessary background to start building your application framework from scratch.
+
+5
+00:00:23,630 --> 00:00:28,490
+‫I would like to say a big thank you for choosing this class and for your support.
+
+6
+00:00:28,940 --> 00:00:31,520
+‫I will appreciate your comments and feedback on this class.
+
+7
+00:00:31,550 --> 00:00:35,840
+‫It will help me to work on the future improvements and update comments on best this class.
+
+8
+00:00:36,500 --> 00:00:39,590
+‫Thank you again and happy automation as a real hero.
+

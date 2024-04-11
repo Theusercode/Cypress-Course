@@ -1,0 +1,136 @@
+﻿1
+00:00:10,330 --> 00:00:15,280
+‫Hello, everyone, my name is Artem, I'm ALLETE Automation engineer and signify health and a welcome
+
+2
+00:00:15,280 --> 00:00:17,470
+‫to my class Cyprus from zero to Hero.
+
+3
+00:00:18,100 --> 00:00:22,660
+‫I have many years experience of hands on experience in this automation of a different selenium based
+
+4
+00:00:22,660 --> 00:00:23,220
+‫frameworks.
+
+5
+00:00:23,440 --> 00:00:28,210
+‫But when I switched to Cyprus, I like it so much and don't want to go back to selenium anymore.
+
+6
+00:00:28,570 --> 00:00:34,660
+‫It's faster, more reliable and overall easier to use so I can write my tests faster and getting consistent
+
+7
+00:00:34,660 --> 00:00:37,600
+‫result of the test from Weisler in Cyprus.
+
+8
+00:00:37,600 --> 00:00:43,570
+‫I have found out that there are not so many well organized video tutorials about how to use this framework
+
+9
+00:00:43,570 --> 00:00:45,280
+‫and implement its best practices.
+
+10
+00:00:45,400 --> 00:00:51,010
+‫So I decided to create my own class, how to build lessons in the logical order, starting from the
+
+11
+00:00:51,010 --> 00:00:53,860
+‫basics and increasing complexity for listen to listen.
+
+12
+00:00:54,340 --> 00:00:57,580
+‫Also, I understand the value of your time spent on the lessons.
+
+13
+00:00:57,700 --> 00:01:03,040
+‫So I try to efficiently organize all content for maximum productivity during the education process.
+
+14
+00:01:03,400 --> 00:01:06,880
+‫And no worries, no prior programming skills required.
+
+15
+00:01:07,150 --> 00:01:12,610
+‫If this will be your first framework for automating applications and you don't have experience with
+
+16
+00:01:12,610 --> 00:01:14,950
+‫selecting a Web driver, it's totally fine.
+
+17
+00:01:16,180 --> 00:01:22,060
+‫In the beginning of the class, we will install the application under the Cyprus framework and we will
+
+18
+00:01:22,060 --> 00:01:23,500
+‫make needed configuration.
+
+19
+00:01:23,920 --> 00:01:25,120
+‫In the second module.
+
+20
+00:01:25,270 --> 00:01:31,060
+‫We will learn the concepts how to find any web elements using Cyprus based on the variety of real life
+
+21
+00:01:31,060 --> 00:01:37,300
+‫example, how to interact with the different types of web elements such as lists, dropdown swept tables,
+
+22
+00:01:37,630 --> 00:01:43,840
+‫input fields and buttons, dialog boxes, check boxes, radio buttons they select and so on.
+
+23
+00:01:44,680 --> 00:01:48,640
+‫And of course, we will learn how to make assertions for third module.
+
+24
+00:01:48,760 --> 00:01:53,080
+‫We'll be about organizing and reusing our code with the beach object design partner.
+
+25
+00:01:53,650 --> 00:01:57,180
+‫In the fourth module, we will learn how to work with APIs.
+
+26
+00:01:57,340 --> 00:02:01,210
+‫And if you don't know what the API is, we will talk about it as well.
+
+27
+00:02:01,690 --> 00:02:06,880
+‫And the last module will be about advanced topics such as environment configurations, reporting and
+
+28
+00:02:06,880 --> 00:02:08,440
+‫running tests with docker container.
+
+29
+00:02:09,100 --> 00:02:14,050
+‫By the end of this class, you will have all needed knowledge and skills to automate pretty much any
+
+30
+00:02:14,050 --> 00:02:20,320
+‫web application use using Cyprus in I.T., there is always room to grow and you will have a solid foundation
+
+31
+00:02:20,320 --> 00:02:21,130
+‫to move forward.
+
+32
+00:02:21,280 --> 00:02:23,680
+‫And if you will have any question, you're in the class.
+
+33
+00:02:23,680 --> 00:02:28,990
+‫You can always reach me out and I will definitely provide the support ready for this exciting journey
+
+34
+00:02:29,260 --> 00:02:31,570
+‫during the class and see you in the classroom.
+

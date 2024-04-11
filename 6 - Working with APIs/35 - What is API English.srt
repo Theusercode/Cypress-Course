@@ -1,0 +1,364 @@
+﻿1
+00:00:11,820 --> 00:00:17,700
+‫Hello, guys, welcome back to my Cyprus automation class from zero to Hero, and in this module, we
+
+2
+00:00:17,700 --> 00:00:20,630
+‫will talk about the networking in Cyprus.
+
+3
+00:00:20,940 --> 00:00:24,900
+‫What tools do you have in Cyprus to work with network connections?
+
+4
+00:00:24,900 --> 00:00:26,910
+‫How can you assert network responses?
+
+5
+00:00:26,910 --> 00:00:29,670
+‫How can you make network responses and stuff like that?
+
+6
+00:00:29,670 --> 00:00:30,120
+‫In the first?
+
+7
+00:00:30,120 --> 00:00:35,190
+‫And the second lesson, we will talk about the basics of the networking, about what is API and how
+
+8
+00:00:35,190 --> 00:00:39,540
+‫does it work and what is Jason object and how to work with the JSON object.
+
+9
+00:00:39,630 --> 00:00:45,810
+‫If you are familiar with the definition of APIs or what the JSON is, you can skip this lesson and the
+
+10
+00:00:45,810 --> 00:00:48,630
+‫next lesson and go straight to the lesson number three.
+
+11
+00:00:48,900 --> 00:00:56,020
+‫If you are not, stay tuned and we will go through about the basics of the APIs and about the JSON object.
+
+12
+00:00:56,070 --> 00:00:57,810
+‫So what is API?
+
+13
+00:00:58,500 --> 00:01:05,010
+‫API is stands for Application Programming Interface, which is widely used in the modern world of the
+
+14
+00:01:05,220 --> 00:01:06,480
+‫Web applications.
+
+15
+00:01:06,900 --> 00:01:15,120
+‫Think about API as a certain black box which can do some stuff for you, and if you know how correctly,
+
+16
+00:01:15,300 --> 00:01:16,560
+‫ask the questions.
+
+17
+00:01:16,950 --> 00:01:21,980
+‫You can receive the answer or response from this black box boy, the certain result.
+
+18
+00:01:22,440 --> 00:01:31,260
+‫Let's imagine that this box on the screen is our weather API and we send request to this API.
+
+19
+00:01:31,290 --> 00:01:36,270
+‫And if the request was correct, we can get response, for example, with the current weather.
+
+20
+00:01:36,990 --> 00:01:40,110
+‫So what kind of request we can do to this API?
+
+21
+00:01:40,110 --> 00:01:47,220
+‫According to documentation, let's say we know that this weather API can return their current weather
+
+22
+00:01:47,220 --> 00:01:48,000
+‫in this city.
+
+23
+00:01:48,000 --> 00:01:54,060
+‫If we will provide the city name as a request, we will get the current weather as a response with the
+
+24
+00:01:54,060 --> 00:01:55,770
+‫forecast for the next two days.
+
+25
+00:01:56,100 --> 00:02:00,180
+‫So usually APIs work with the payloads in JSON format.
+
+26
+00:02:00,180 --> 00:02:04,050
+‫So in this box, typical example of the simple JSON object.
+
+27
+00:02:04,260 --> 00:02:11,040
+‫And if we send the request to this API that the city name is New York, we will get the response from
+
+28
+00:02:11,040 --> 00:02:19,290
+‫this API that the current weather, the current temperature is 70 degrees, humidity is forty five and
+
+29
+00:02:19,320 --> 00:02:24,870
+‫forecast for tomorrow is seventy five and day after tomorrow is sixty.
+
+30
+00:02:25,110 --> 00:02:30,930
+‫If we will change the city name, for example, to Chicago and send this request again, the weather
+
+31
+00:02:30,930 --> 00:02:37,080
+‫API will return this object with exactly the same format, but just with the different options.
+
+32
+00:02:37,260 --> 00:02:45,150
+‫So this is the basic approach, how API works and the representation of the data over here in this box.
+
+33
+00:02:45,390 --> 00:02:52,560
+‫This is a typical JSON object and this is how most of the Web application work in nowadays.
+
+34
+00:02:53,620 --> 00:03:03,070
+‫What kind of API request exist so it can be get request, post, request, put and delete, get request
+
+35
+00:03:03,250 --> 00:03:07,810
+‫is considered to get the request for the specific data for API.
+
+36
+00:03:07,810 --> 00:03:14,140
+‫For example, in the previous slide, I showed you how we requested the data from the weather API to
+
+37
+00:03:14,140 --> 00:03:22,570
+‫get their information about the weather forecast based on the city post and put request type of request
+
+38
+00:03:22,570 --> 00:03:27,760
+‫created to send data to API to create or update the resource.
+
+39
+00:03:27,760 --> 00:03:33,940
+‫For example, you're submitting some web form or web application and send it to the server post and
+
+40
+00:03:33,940 --> 00:03:39,150
+‫put request has very similar functionality and we will not go into that much detail.
+
+41
+00:03:39,370 --> 00:03:42,220
+‫What's the difference between those for our subject?
+
+42
+00:03:42,230 --> 00:03:43,270
+‫It doesn't really matter.
+
+43
+00:03:43,690 --> 00:03:50,650
+‫And the little requests remove specified resource based on the request information, what the typical
+
+44
+00:03:50,650 --> 00:03:52,510
+‫API request consists of.
+
+45
+00:03:53,900 --> 00:04:02,390
+‫Each API request should have API, your URL, so this is HTP link to the API and usually it's called
+
+46
+00:04:02,390 --> 00:04:03,510
+‫as End Point.
+
+47
+00:04:03,560 --> 00:04:05,300
+‫So this is basically Web address.
+
+48
+00:04:05,780 --> 00:04:08,180
+‫Where will you send your request?
+
+49
+00:04:10,630 --> 00:04:18,400
+‫Second is headers, usually you do find their content type or if it is secure API and require authorization,
+
+50
+00:04:18,400 --> 00:04:20,930
+‫you will see their authorization token as well.
+
+51
+00:04:21,730 --> 00:04:27,630
+‫Then you provide the type of your request, which we discussed on the previous five, get post put and
+
+52
+00:04:27,640 --> 00:04:29,410
+‫delete and body.
+
+53
+00:04:29,440 --> 00:04:35,110
+‫But it is JSON object with the request data sometimes get request may not have bought.
+
+54
+00:04:35,120 --> 00:04:43,300
+‫It has just query string parameters, but post request always will have some body which we are requesting
+
+55
+00:04:43,300 --> 00:04:45,340
+‫or sending data to the API.
+
+56
+00:04:45,400 --> 00:04:49,780
+‫This is the four typical components for the API request.
+
+57
+00:04:50,710 --> 00:04:53,410
+‫Most of the maundering applications are client server.
+
+58
+00:04:53,560 --> 00:05:01,240
+‫So Web browser is our client and certain backend server with a bunch of APIs working on the server side
+
+59
+00:05:01,270 --> 00:05:06,040
+‫and our browser during the interactions sends a bunch of API requests.
+
+60
+00:05:06,130 --> 00:05:12,250
+‫You cannot even imagine how many of those our browser are sending to the certain backend APIs.
+
+61
+00:05:12,250 --> 00:05:20,830
+‫And then boyens every minute what Cyperus can do, it can intercept some of those calls and provide
+
+62
+00:05:20,830 --> 00:05:23,440
+‫the mock response to your web browser.
+
+63
+00:05:23,470 --> 00:05:30,520
+‫This is a very cool Cyprus feature when you can create your own service and provide the response which
+
+64
+00:05:30,520 --> 00:05:32,410
+‫you actually need for your test.
+
+65
+00:05:32,630 --> 00:05:39,340
+‫Sometimes you may have pretty complicated end to end scenarios when you will need to provide certain
+
+66
+00:05:39,340 --> 00:05:43,470
+‫type of data to be displayed on your Web browser to test the scenarios.
+
+67
+00:05:43,480 --> 00:05:47,110
+‫And this may save you a lot of time because you have two advantages here.
+
+68
+00:05:47,110 --> 00:05:49,890
+‫You can simulate complicated scenarios.
+
+69
+00:05:49,900 --> 00:05:51,670
+‫It's the number one and second.
+
+70
+00:05:51,670 --> 00:05:57,970
+‫It is very fast because you are not spending time on waiting the response for the real server.
+
+71
+00:05:57,970 --> 00:05:59,900
+‫You don't spend time on the networking.
+
+72
+00:05:59,950 --> 00:06:05,140
+‫The response from the Cyprus server comes back instantly because it's located on the same machine you
+
+73
+00:06:05,140 --> 00:06:10,030
+‫are running tests on and the same time you can specify which API calls.
+
+74
+00:06:10,030 --> 00:06:16,510
+‫You still want to go through to the real API server and which one you want to mock and the examples
+
+75
+00:06:16,510 --> 00:06:19,690
+‫of the mocking we will definitely cover in this module.
+
+76
+00:06:21,160 --> 00:06:28,540
+‫Also in Cyprus, you can make actual API requests to the server without UI on behalf of the browser,
+
+77
+00:06:28,720 --> 00:06:34,750
+‫you can send the API request, get certain response from the backend server and then use this data for
+
+78
+00:06:34,750 --> 00:06:35,340
+‫something.
+
+79
+00:06:35,350 --> 00:06:41,860
+‫So what a cool thing about the Cyprus, that it's not just a framework for UI functional testing, it
+
+80
+00:06:41,860 --> 00:06:44,110
+‫can be used also for API testing.
+
+81
+00:06:44,110 --> 00:06:47,200
+‫It's kind of a hybrid approach of testing, if you will.
+
+82
+00:06:48,190 --> 00:06:52,120
+‫So let's summarize what we learn in this lesson about API.
+
+83
+00:06:52,540 --> 00:06:55,600
+‫API stands for application programming interface.
+
+84
+00:06:55,600 --> 00:06:56,770
+‫It's like a black box.
+
+85
+00:06:56,770 --> 00:07:00,130
+‫You can send request to it and get a certain response.
+
+86
+00:07:01,330 --> 00:07:05,410
+‫Types of request for the APIs are gatepost food and lette.
+
+87
+00:07:06,010 --> 00:07:10,750
+‫Typical request has your URL headers request type and body.
+
+88
+00:07:11,860 --> 00:07:18,820
+‫Cyprus has built in server which can intercept browser API request and provide mock responses and also
+
+89
+00:07:18,820 --> 00:07:22,450
+‫Cyprus can make API request and process the responses.
+
+90
+00:07:23,170 --> 00:07:24,430
+‫So that's you guys.
+
+91
+00:07:24,430 --> 00:07:25,930
+‫See you in the next lesson.
+

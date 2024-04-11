@@ -1,0 +1,360 @@
+﻿1
+00:00:10,350 --> 00:00:11,140
+‫Hello, guys.
+
+2
+00:00:11,160 --> 00:00:12,390
+‫Welcome back to the class.
+
+3
+00:00:12,390 --> 00:00:14,010
+‫Cyprus from zero to hero.
+
+4
+00:00:14,010 --> 00:00:20,070
+‫And in this lesson we will clone and run test application that we're going to use for this class.
+
+5
+00:00:20,160 --> 00:00:26,100
+‫So the first thing, let's create a new folder on our computer where we will keep our code.
+
+6
+00:00:26,100 --> 00:00:27,060
+‫Just for this demo.
+
+7
+00:00:27,060 --> 00:00:32,790
+‫I'm going to create a new folder on the desktop, but you can create it anywhere on your computer where
+
+8
+00:00:32,790 --> 00:00:35,910
+‫you normally keep your documents or keep your code.
+
+9
+00:00:35,910 --> 00:00:41,040
+‫If you already have folder on your computer where you keep the source code for other applications,
+
+10
+00:00:41,040 --> 00:00:44,370
+‫you can use that folder just to keep everything organized.
+
+11
+00:00:44,370 --> 00:00:48,810
+‫So I create a new folder and let's name it, let's say git repo.
+
+12
+00:00:51,060 --> 00:00:56,880
+‫Now we need to open this folder in the terminal If you are on my computer.
+
+13
+00:00:56,880 --> 00:01:03,510
+‫One way of doing this is just right click of the mouse services and new terminal at this folder and
+
+14
+00:01:03,510 --> 00:01:04,890
+‫the terminal is open.
+
+15
+00:01:04,890 --> 00:01:07,350
+‫Another option you can go to Spotlight search.
+
+16
+00:01:07,350 --> 00:01:08,760
+‫Find your terminal.
+
+17
+00:01:10,780 --> 00:01:14,840
+‫Open the terminal and then simply navigate to this folder.
+
+18
+00:01:14,860 --> 00:01:16,000
+‫CD.
+
+19
+00:01:18,290 --> 00:01:21,980
+‫Desktop git repo.
+
+20
+00:01:22,130 --> 00:01:22,840
+‫And that's it.
+
+21
+00:01:22,850 --> 00:01:28,400
+‫So as you can see, we are right now inside of this folder, if you are on Windows computer, you do
+
+22
+00:01:28,400 --> 00:01:29,510
+‫pretty much the same.
+
+23
+00:01:29,510 --> 00:01:34,130
+‫You will need to find a command prompt terminal on your windows computer.
+
+24
+00:01:34,130 --> 00:01:38,300
+‫You just go to the start menu search bar and type there command prompt.
+
+25
+00:01:38,390 --> 00:01:45,770
+‫Then you do pretty much the same thing using the commands CD space and providing the path to the folder
+
+26
+00:01:45,770 --> 00:01:47,210
+‫where it is located.
+
+27
+00:01:47,210 --> 00:01:51,020
+‫You need to open this folder in the terminal.
+
+28
+00:01:51,020 --> 00:01:52,850
+‫So that's the step one.
+
+29
+00:01:53,060 --> 00:01:56,270
+‫Step number two, we open the browser and go to the GitHub.
+
+30
+00:01:57,500 --> 00:02:07,610
+‫On the GitHub on the search bar we are searching for in g x Cyprus test.
+
+31
+00:02:08,830 --> 00:02:12,790
+‫And the very first repository is the one that we are looking for.
+
+32
+00:02:12,790 --> 00:02:15,330
+‫Bonder Artem Inks Cyprus Test.
+
+33
+00:02:15,340 --> 00:02:17,290
+‫This is our test project.
+
+34
+00:02:17,410 --> 00:02:22,330
+‫Also on Udemy, you can find a link to this repository attached to this lesson.
+
+35
+00:02:22,330 --> 00:02:26,230
+‫Just click on the resources and here is the link GitHub repository.
+
+36
+00:02:26,230 --> 00:02:29,330
+‫Click on that and you will be navigated to GitHub.
+
+37
+00:02:29,350 --> 00:02:32,320
+‫So here we need to click on the code button.
+
+38
+00:02:33,240 --> 00:02:35,340
+‫And then copy this URL.
+
+39
+00:02:35,340 --> 00:02:39,990
+‫Just simply click on this icon and the entire URL will be copied.
+
+40
+00:02:40,020 --> 00:02:49,710
+‫Then we go in back to our terminal and type in the command git space, clone space, and we paste the
+
+41
+00:02:49,710 --> 00:02:53,550
+‫URL that we copied from the GitHub and click enter.
+
+42
+00:02:54,600 --> 00:02:55,130
+‫That's it.
+
+43
+00:02:55,140 --> 00:03:01,200
+‫The project is closed to this folder, and now we just need to open Visual Studio code and open the
+
+44
+00:03:01,200 --> 00:03:03,190
+‫folder that we just copied.
+
+45
+00:03:03,210 --> 00:03:13,050
+‫This is Visual Studio code, Open file, open folder, and I'm going to the desktop desktop git repo
+
+46
+00:03:13,050 --> 00:03:20,610
+‫in Cyprus test and make sure that you pick the root of this folder in Cyprus test and click open.
+
+47
+00:03:21,210 --> 00:03:21,940
+‫Here we go.
+
+48
+00:03:21,960 --> 00:03:23,100
+‫Application is open.
+
+49
+00:03:23,100 --> 00:03:25,650
+‫We can see the folder structure on the left.
+
+50
+00:03:25,740 --> 00:03:31,740
+‫Now the next step we need to install all the dependencies required for this application to actually
+
+51
+00:03:31,740 --> 00:03:33,360
+‫run it on our computer.
+
+52
+00:03:33,360 --> 00:03:40,500
+‫We need to open a new terminal, click on the terminal, new terminal and inside of the open terminal.
+
+53
+00:03:40,500 --> 00:03:50,280
+‫Need to run command and PM space install space dash, dash force and click enter.
+
+54
+00:03:51,030 --> 00:03:58,410
+‫So now node package manager is done loaded all required dependencies to run this application.
+
+55
+00:03:58,410 --> 00:04:04,290
+‫So not package manager looking into this package that JSON file and from this dependency section in
+
+56
+00:04:04,290 --> 00:04:06,660
+‫the loading, all the required packages.
+
+57
+00:04:06,660 --> 00:04:14,940
+‫We used a dash dash force flag because sometimes on your system you may have some conflicts or warnings
+
+58
+00:04:14,940 --> 00:04:19,080
+‫because of the conflict with some of the packages that already installed in your computer.
+
+59
+00:04:19,080 --> 00:04:22,410
+‫In order to avoid that, we just want to bypass this.
+
+60
+00:04:22,410 --> 00:04:28,680
+‫Bypassing a false flag installation process may take a few minutes, so you just need to patiently wait
+
+61
+00:04:28,680 --> 00:04:32,220
+‫until it will be completed so it can take like several minutes.
+
+62
+00:04:41,120 --> 00:04:41,540
+‫All right.
+
+63
+00:04:41,540 --> 00:04:44,570
+‫An installation is completed at the end of the installation.
+
+64
+00:04:44,570 --> 00:04:46,700
+‫You may see a window, something like that.
+
+65
+00:04:46,700 --> 00:04:49,460
+‫That new major version is available.
+
+66
+00:04:49,460 --> 00:04:54,980
+‫Also, you will see the message like that that some vulnerabilities are found, but just ignore this
+
+67
+00:04:54,980 --> 00:04:55,520
+‫message.
+
+68
+00:04:55,520 --> 00:04:59,210
+‫It's related to some of the packages are just not up to date.
+
+69
+00:04:59,210 --> 00:05:04,580
+‫And because this application is used in Angular eight, some of the packages simply cannot be updated
+
+70
+00:05:04,580 --> 00:05:05,570
+‫to the higher version.
+
+71
+00:05:05,570 --> 00:05:08,690
+‫And that's why NPM just showing these kind of warnings.
+
+72
+00:05:08,690 --> 00:05:10,100
+‫But this is okay for us.
+
+73
+00:05:10,100 --> 00:05:14,870
+‫All we need is just to run this application on the local host and that's it.
+
+74
+00:05:14,870 --> 00:05:22,820
+‫The next step to run this application is execute command in PM, start and click enter.
+
+75
+00:05:24,300 --> 00:05:27,930
+‫And we can see application is building and compiling.
+
+76
+00:05:32,470 --> 00:05:32,830
+‫All right.
+
+77
+00:05:32,830 --> 00:05:35,380
+‫And we see a message compiled successfully.
+
+78
+00:05:35,380 --> 00:05:36,850
+‫This is what we are looking for.
+
+79
+00:05:36,850 --> 00:05:40,750
+‫And also open your browser on local host 4200.
+
+80
+00:05:40,750 --> 00:05:42,400
+‫And this is what we need to do.
+
+81
+00:05:42,820 --> 00:05:51,490
+‫Going back to the Chrome browser, opening a new tab and type in local host 4200.
+
+82
+00:05:52,830 --> 00:05:53,780
+‫And click enter.
+
+83
+00:05:53,790 --> 00:05:54,240
+‫Here we go.
+
+84
+00:05:54,240 --> 00:05:55,740
+‫This is our test application.
+
+85
+00:05:55,740 --> 00:05:57,270
+‫It's successfully running.
+
+86
+00:05:57,300 --> 00:05:59,130
+‫It has a different pages.
+
+87
+00:05:59,130 --> 00:06:04,350
+‫As you can see, we will use for this class like forms, layout, date picker to practice different
+
+88
+00:06:04,380 --> 00:06:10,140
+‫types of UI elements and how to interact with those types of web elements using Cyprus.
+
+89
+00:06:10,350 --> 00:06:10,770
+‫All right.
+
+90
+00:06:10,770 --> 00:06:15,270
+‫So the next step will be to install Cyprus and we will do it in the next lesson.
+

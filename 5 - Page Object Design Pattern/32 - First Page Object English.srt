@@ -1,0 +1,624 @@
+﻿1
+00:00:10,800 --> 00:00:16,710
+‫Hello, guys, welcome back to my Cyprus automation and less from zero to Hero, and in this module,
+
+2
+00:00:16,800 --> 00:00:25,500
+‫we will talk about the object design pattern and we will learn how to organize our test to make it nicer,
+
+3
+00:00:25,500 --> 00:00:28,500
+‫more readable and code more reusable.
+
+4
+00:00:28,620 --> 00:00:32,870
+‫I think you probably heard about the object model object pattern.
+
+5
+00:00:33,090 --> 00:00:36,270
+‫This is pretty popular topic, IMO, automation engineers.
+
+6
+00:00:36,540 --> 00:00:44,610
+‫And in this module, I will show you how to implement this beach object button for the cypress and we
+
+7
+00:00:44,610 --> 00:00:47,670
+‫will not use any Cucumber's or any other shells.
+
+8
+00:00:47,670 --> 00:00:50,760
+‫On the top of that, we will just use JavaScript and Cyprus.
+
+9
+00:00:50,880 --> 00:00:57,510
+‫So let's start with creating a new spec gloss, which we will use to write our test using the page object
+
+10
+00:00:57,780 --> 00:00:58,350
+‫better.
+
+11
+00:00:58,950 --> 00:01:01,350
+‫So you file.
+
+12
+00:01:06,350 --> 00:01:09,350
+‫So we created our new file, let's put.
+
+13
+00:01:11,850 --> 00:01:12,570
+‫Describe.
+
+14
+00:01:17,770 --> 00:01:25,330
+‫All right, this is the body of our test, and let's go to our first tests, bags, and as you remember,
+
+15
+00:01:25,510 --> 00:01:30,810
+‫for each of our tests, we use this visit site visit in each test.
+
+16
+00:01:30,820 --> 00:01:37,110
+‫This is kind of not nice to copy paste the code always when you see the copy paste over the code.
+
+17
+00:01:37,120 --> 00:01:42,640
+‫Remember that if you copy paste in any code more than two times, then there is definitely place to
+
+18
+00:01:42,640 --> 00:01:46,420
+‫refactoring because we are using site visit in each and every test.
+
+19
+00:01:46,420 --> 00:01:54,880
+‫We want to create some before each hook to repeat site visit for us every time so we will not copy paste
+
+20
+00:01:54,880 --> 00:01:56,310
+‫this thing again and again.
+
+21
+00:01:56,950 --> 00:01:59,410
+‫So before each.
+
+22
+00:02:03,800 --> 00:02:12,950
+‫So before every test, this hook will open application for us and then let's right first test and for
+
+23
+00:02:12,950 --> 00:02:17,230
+‫the beginning, let's ride the test to organize our menu.
+
+24
+00:02:17,240 --> 00:02:23,870
+‫So as you see, our application has the menu and we you can navigate different pages of our application.
+
+25
+00:02:24,300 --> 00:02:29,060
+‫So the very first thing we want to organize is the navigation part of our app.
+
+26
+00:02:29,060 --> 00:02:37,790
+‫And let's name this test as the refined navigation across the pages.
+
+27
+00:02:45,240 --> 00:02:51,450
+‫So let's go back to our previous test, and as you see, for each of every test we copy pasted, the
+
+28
+00:02:51,450 --> 00:02:55,890
+‫things like site contains forms, layout in the next test, we did the same thing.
+
+29
+00:02:55,890 --> 00:02:59,990
+‫Site contains Klick, contains the picture, click and so on.
+
+30
+00:03:00,000 --> 00:03:04,970
+‫And this is something we want probably to reuse, but not copy paste.
+
+31
+00:03:05,190 --> 00:03:12,000
+‫So let's create just a page object which will be responsible for the navigation in this menu and we
+
+32
+00:03:12,000 --> 00:03:14,310
+‫will reuse these functions later on.
+
+33
+00:03:14,340 --> 00:03:15,420
+‫So how to do that?
+
+34
+00:03:15,730 --> 00:03:17,730
+‫Let's go to our support folder.
+
+35
+00:03:17,730 --> 00:03:19,160
+‫In the Cypress structure.
+
+36
+00:03:19,380 --> 00:03:22,530
+‫We will create a new folder and name it page.
+
+37
+00:03:27,830 --> 00:03:35,270
+‫Page objects, and I remind you in the file structure of the files picture folder are created for the
+
+38
+00:03:35,270 --> 00:03:37,330
+‫fixtures and we will talk about it later.
+
+39
+00:03:37,340 --> 00:03:39,410
+‫Integration is for the test plugins.
+
+40
+00:03:39,410 --> 00:03:45,860
+‫It's for the plug ins in support folder is for everything else, for all code, which you will need
+
+41
+00:03:46,130 --> 00:03:47,380
+‫to run your test.
+
+42
+00:03:47,390 --> 00:03:53,140
+‫So we will keep our page objects under this support folder in inside of our objects.
+
+43
+00:03:53,150 --> 00:03:56,060
+‫We will create new file and we will call it.
+
+44
+00:03:58,870 --> 00:04:00,970
+‫Navigation page that.
+
+45
+00:04:02,500 --> 00:04:06,850
+‫This is a new file and let's create a new class inside of this object.
+
+46
+00:04:11,480 --> 00:04:16,490
+‫And we will need to create a new instance of this class and assign it to the object.
+
+47
+00:04:20,320 --> 00:04:27,940
+‫So we created a new object of our navigation page, and now let's create a method which will be responsible
+
+48
+00:04:27,940 --> 00:04:30,700
+‫for navigation, layout, forms, layout.
+
+49
+00:04:30,790 --> 00:04:33,860
+‫This was the first page we used for our test.
+
+50
+00:04:33,880 --> 00:04:36,030
+‫So this sign contains form cycling.
+
+51
+00:04:36,100 --> 00:04:37,120
+‫This is our code.
+
+52
+00:04:37,630 --> 00:04:41,830
+‫Go back to our objects and let's name it.
+
+53
+00:04:45,080 --> 00:04:47,360
+‫Form Layout's Beach.
+
+54
+00:04:50,920 --> 00:04:53,840
+‫And just copy this code over here.
+
+55
+00:04:55,000 --> 00:04:57,180
+‫So what else do do we have?
+
+56
+00:04:57,910 --> 00:05:00,480
+‫And we have former state baker.
+
+57
+00:05:00,640 --> 00:05:02,160
+‫Let's copy this as well.
+
+58
+00:05:08,160 --> 00:05:10,770
+‫And this is the bigger picture.
+
+59
+00:05:11,340 --> 00:05:16,350
+‫All right, we created two methods, each of them responsible for navigation for each of the page.
+
+60
+00:05:16,380 --> 00:05:21,360
+‫Now let's go to our test and call our object.
+
+61
+00:05:25,790 --> 00:05:33,230
+‫On navigation page for layout page, I don't really like how we name it, let's remain like this,
+
+62
+00:05:37,490 --> 00:05:41,840
+‫navigate to and we replace this.
+
+63
+00:05:42,920 --> 00:05:44,750
+‫Navigate to.
+
+64
+00:05:45,320 --> 00:05:54,860
+‫OK, this sounds nice or navigate to forms, layout, page and navigate to the bigger page.
+
+65
+00:05:57,290 --> 00:05:58,110
+‫OK, let's try.
+
+66
+00:05:58,130 --> 00:05:59,130
+‫How does it work?
+
+67
+00:06:09,850 --> 00:06:11,490
+‫OK, look what happened.
+
+68
+00:06:11,510 --> 00:06:18,580
+‫So we were able successfully to navigate to the forms layouts, but when we wanted to click on that
+
+69
+00:06:18,610 --> 00:06:21,190
+‫picture, that didn't work and why?
+
+70
+00:06:21,190 --> 00:06:24,250
+‫Because our forms menu was collapsed.
+
+71
+00:06:24,640 --> 00:06:26,250
+‫Why did that happen?
+
+72
+00:06:26,260 --> 00:06:33,190
+‫Just over here, when we click on the form menu, it's either open the menu form or collapse the menu
+
+73
+00:06:33,400 --> 00:06:34,420
+‫menu over here.
+
+74
+00:06:34,420 --> 00:06:41,140
+‫And we will go to our methods responsible for navigation, to the forums, layouts or they peaker.
+
+75
+00:06:41,290 --> 00:06:47,200
+‫We see that we first click on the forums and in this example we click on the forums as well, but we
+
+76
+00:06:47,200 --> 00:06:48,420
+‫actually don't want that.
+
+77
+00:06:48,820 --> 00:06:57,370
+‫So now we need to add some additional logic which will verify if the menu is open or not and if it is
+
+78
+00:06:57,370 --> 00:07:03,580
+‫opened, we want to click on the menu item or if it's not, we want to click on the header for this
+
+79
+00:07:03,580 --> 00:07:04,360
+‫menu item.
+
+80
+00:07:04,360 --> 00:07:06,280
+‫In our example, it is for us.
+
+81
+00:07:06,940 --> 00:07:10,790
+‫Let's go and inspect element and we see what we need to do for it.
+
+82
+00:07:10,810 --> 00:07:12,130
+‫So this is our form.
+
+83
+00:07:12,820 --> 00:07:18,130
+‫And as we see, we have this small Chevron, which is change his direction.
+
+84
+00:07:18,130 --> 00:07:19,390
+‫Let's inspect it.
+
+85
+00:07:21,220 --> 00:07:23,140
+‫And Chevron left.
+
+86
+00:07:23,140 --> 00:07:24,880
+‫And when we click.
+
+87
+00:07:25,930 --> 00:07:31,040
+‫On the button, inspect the position is Chevron, right?
+
+88
+00:07:31,330 --> 00:07:37,150
+‫So we probably what we want to do is to grab the value of this name attribute.
+
+89
+00:07:37,150 --> 00:07:44,010
+‫And if this attribute is left, it means that menu is closed.
+
+90
+00:07:44,170 --> 00:07:48,630
+‫We want to click on this menu, otherwise we just won't escape this.
+
+91
+00:07:48,790 --> 00:07:50,880
+‫So let's write this code right now.
+
+92
+00:07:52,990 --> 00:07:57,080
+‫And this Chevron is located inside.
+
+93
+00:07:58,660 --> 00:08:06,390
+‫This is a form name, and we see that this menu is a sibling for that and the icon.
+
+94
+00:08:06,400 --> 00:08:09,190
+‫So we have an icon one and be icon two.
+
+95
+00:08:09,190 --> 00:08:13,420
+‫And the forms name is located inside of this eye contact.
+
+96
+00:08:13,450 --> 00:08:21,910
+‫So in order to access the second the icon, we have to go in one level up to the anchor tag and then
+
+97
+00:08:21,910 --> 00:08:25,500
+‫select these CHIBBARO and find this out.
+
+98
+00:08:25,510 --> 00:08:26,910
+‫So let's do this.
+
+99
+00:08:27,430 --> 00:08:31,180
+‫So we want to find a.
+
+100
+00:08:41,790 --> 00:08:51,540
+‫So we got the menu and now we will need to find these Chevron left and this is located Underclass Expand
+
+101
+00:08:51,540 --> 00:08:52,190
+‫State.
+
+102
+00:08:52,230 --> 00:08:55,410
+‫So these glasses menu icon, this is expen state.
+
+103
+00:08:55,410 --> 00:09:04,930
+‫So we can use this as a unique identifier and we will need this second G over here.
+
+104
+00:09:04,950 --> 00:09:11,640
+‫So what we need is find it to find this.
+
+105
+00:09:12,060 --> 00:09:19,080
+‫Then we need to find first G and second G, then we want to invoke.
+
+106
+00:09:23,180 --> 00:09:25,700
+‫Attribute is.
+
+107
+00:09:27,710 --> 00:09:28,850
+‫The name.
+
+108
+00:09:34,600 --> 00:09:36,190
+‫Attribute the name.
+
+109
+00:09:36,310 --> 00:09:40,870
+‫Let's go upstairs, then
+
+110
+00:09:44,410 --> 00:09:53,380
+‫attribute and then we want to write something if our attribute.
+
+111
+00:09:56,050 --> 00:10:04,060
+‫Includes left, that means our menu is collapsing.
+
+112
+00:10:04,420 --> 00:10:06,100
+‫We want Cy.
+
+113
+00:10:07,380 --> 00:10:18,590
+‫Rap menu and click, otherwise, we just skip the if statement and we'll go straight over here.
+
+114
+00:10:18,930 --> 00:10:21,320
+‫So let's check if this thing will work.
+
+115
+00:10:21,330 --> 00:10:23,430
+‫Now let's copy this thing.
+
+116
+00:10:24,700 --> 00:10:27,550
+‫We based it over here.
+
+117
+00:10:31,480 --> 00:10:35,320
+‫And let's run our test to see if our logic is working.
+
+118
+00:10:43,530 --> 00:10:44,760
+‫All right, perfect.
+
+119
+00:10:44,790 --> 00:10:49,470
+‫So, as you see, we were able to select form layout first and then they'd be confirmed.
+
+120
+00:10:49,480 --> 00:10:54,270
+‫So our code was able to understand if the menu collapsed or not.
+
+121
+00:10:54,270 --> 00:11:02,610
+‫And if it is not, then we just skip the clicking on the header of the form and select the menu item.
+
+122
+00:11:02,640 --> 00:11:07,640
+‫Now, let's make small refactoring because we don't want to make this copy paste.
+
+123
+00:11:07,650 --> 00:11:11,250
+‫Let's extract this method to the reuseable function.
+
+124
+00:11:31,250 --> 00:11:39,050
+‫So what we did is I extracted this checker for the group is collapse or not do a reusable function named
+
+125
+00:11:39,050 --> 00:11:46,910
+‫and select group menu item, and I assign the parameter group name, which I use over here inside contains
+
+126
+00:11:46,910 --> 00:11:47,480
+‫group name.
+
+127
+00:11:47,480 --> 00:11:55,640
+‫And then I just call our reusable function and provide the group name over here so I can use this function
+
+128
+00:11:55,640 --> 00:11:59,110
+‫now for any group name inside of our test.
+
+129
+00:11:59,390 --> 00:12:03,350
+‫So let's run that test and see if it is working.
+
+130
+00:12:06,680 --> 00:12:08,130
+‫Yes, it is working.
+
+131
+00:12:09,230 --> 00:12:16,370
+‫Sounds good, and all we have to do right now is just to copy the rest of the methods which we used
+
+132
+00:12:16,370 --> 00:12:17,300
+‫for navigation.
+
+133
+00:12:17,300 --> 00:12:21,920
+‫And and we will be able to complete our first object navigation page.
+
+134
+00:13:03,460 --> 00:13:09,430
+‫All right, I think we're done organizing this, so we created five methods to navigate across different
+
+135
+00:13:09,430 --> 00:13:14,320
+‫pages is tooltip page, smart table page Towcester Picker and forms layout.
+
+136
+00:13:14,680 --> 00:13:21,940
+‫Now, let's go back to our test with page objects and let's just navigate to these pages, OK?
+
+137
+00:13:21,950 --> 00:13:27,670
+‫Navigate to date picture forms, layout, smart table page.
+
+138
+00:13:27,910 --> 00:13:36,310
+‫And now you see how it is it comfortable to find where we want to navigate Towcester page, tooltip
+
+139
+00:13:36,520 --> 00:13:43,670
+‫tooltip page and navigate to what was left Towcester page.
+
+140
+00:13:44,800 --> 00:13:49,630
+‫OK, and let's run this test and we'll check our navigation.
+
+141
+00:13:56,390 --> 00:13:57,420
+‫All right, perfect.
+
+142
+00:13:57,440 --> 00:14:03,600
+‫Our navigation across the pages works just fine, and let's quickly summarize what we did in this lesson.
+
+143
+00:14:03,740 --> 00:14:09,680
+‫So in this lesson we used before each vote for the first time, we put there our side that visit to
+
+144
+00:14:09,680 --> 00:14:11,060
+‫open our application.
+
+145
+00:14:11,060 --> 00:14:16,490
+‫And this code will be executed for every test in these described blocks.
+
+146
+00:14:16,500 --> 00:14:24,980
+‫So in this test class and we created our first page object, which is navigation page object, and put
+
+147
+00:14:24,980 --> 00:14:31,750
+‫there a few methods in each of the methods responsible for navigation for certain page.
+
+148
+00:14:31,760 --> 00:14:37,610
+‫And we created one reusable function, which we are using only for these methods.
+
+149
+00:14:37,760 --> 00:14:42,990
+‫And this function is responsible to determine the state of the main menu.
+
+150
+00:14:43,010 --> 00:14:44,660
+‫Is it opened or collapsed?
+
+151
+00:14:44,660 --> 00:14:47,900
+‫So our navigation across the pages will work just fine.
+
+152
+00:14:48,080 --> 00:14:55,520
+‫And we created a very simple first test which will verify that we can successfully navigate across our
+
+153
+00:14:55,700 --> 00:14:58,310
+‫pages and we are using page objects.
+
+154
+00:14:58,310 --> 00:15:00,110
+‫Better to do that.
+
+155
+00:15:00,290 --> 00:15:01,460
+‫It was the part one.
+
+156
+00:15:01,460 --> 00:15:06,560
+‫In the second part, we will run more test using page objects.
+

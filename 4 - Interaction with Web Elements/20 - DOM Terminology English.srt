@@ -1,0 +1,384 @@
+﻿1
+00:00:11,220 --> 00:00:19,440
+‫Hello, guys, welcome to my Cyprus automation, plus from zero to Hero, and before we start all automation
+
+2
+00:00:19,440 --> 00:00:26,100
+‫process and learn how to automate Web application with a Cyprus, first of all, I would like to clarify
+
+3
+00:00:26,100 --> 00:00:31,040
+‫the terminology which we will use to automate any Web application.
+
+4
+00:00:31,350 --> 00:00:36,840
+‫You should clearly understand how to locate any Web element on the Web page.
+
+5
+00:00:37,200 --> 00:00:43,630
+‫And in order to do that, you should know what the DOM is and how to navigate against the dump.
+
+6
+00:00:43,690 --> 00:00:46,980
+‫So if we make it right, click and inspect element.
+
+7
+00:00:47,640 --> 00:00:54,750
+‫This is Chrome developer tools of our application on our test and you will see the HTML structure over
+
+8
+00:00:54,750 --> 00:00:55,170
+‫here.
+
+9
+00:00:55,200 --> 00:01:03,690
+‫So this is our DOM and you should be very, very confident in how to find Web elements over here.
+
+10
+00:01:03,870 --> 00:01:09,710
+‫So we will discuss right now the DOM or HTML structure consists of.
+
+11
+00:01:09,720 --> 00:01:18,240
+‫So you will be very clear how to navigate in HTML and finally cater for any element in HTML.
+
+12
+00:01:18,360 --> 00:01:25,010
+‫And I would like to talk about it on this example of a simple HTML code for input email field.
+
+13
+00:01:25,320 --> 00:01:27,740
+‫So let's analyze what it consists of.
+
+14
+00:01:27,930 --> 00:01:34,260
+‫One of the biggest problem which I have noticed for the automation engineers is the find web elements.
+
+15
+00:01:34,260 --> 00:01:43,740
+‫And this problem come out of the not clear understanding of what is the naming of each HTML field and
+
+16
+00:01:43,740 --> 00:01:45,900
+‫each HTML value.
+
+17
+00:01:45,900 --> 00:01:53,580
+‫And that creates a confusion how to create the correct locators in any automation tool like selenium
+
+18
+00:01:53,580 --> 00:01:55,040
+‫or especially Cyprus.
+
+19
+00:01:55,050 --> 00:01:57,330
+‫I would like to clarify that for you.
+
+20
+00:01:58,290 --> 00:02:00,780
+‫So let's start with HTML.
+
+21
+00:02:00,780 --> 00:02:08,430
+‫So HTML structure has a HTML tags and these tags called HTML tag name.
+
+22
+00:02:08,610 --> 00:02:17,880
+‫Usually HTML tags come in pairs with open enclosing deck for example, is deep is open text and D with
+
+23
+00:02:17,880 --> 00:02:19,740
+‫a forward slash is a closed deck.
+
+24
+00:02:19,740 --> 00:02:23,730
+‫And this is the input html tag which do not have close.
+
+25
+00:02:23,730 --> 00:02:27,930
+‫InTech is just have this angle brace which is close in this tack.
+
+26
+00:02:28,740 --> 00:02:37,740
+‫Inside of the HTML tag are HTML attributes which are in Chrome browser highlighted in red and they called
+
+27
+00:02:37,740 --> 00:02:49,200
+‫HTML attribute names in HTML attributes has value and they are usually highlighted in blue and sometimes
+
+28
+00:02:49,200 --> 00:02:53,490
+‫HTML attributes can have values and sometimes they are not.
+
+29
+00:02:53,490 --> 00:03:02,190
+‫And for example, this HTML attribute name placeholder has a value email or type attribute, has a value
+
+30
+00:03:02,190 --> 00:03:03,390
+‫email as well.
+
+31
+00:03:03,690 --> 00:03:10,860
+‫But and be input h html attribute do not have value, but it is attribute as well.
+
+32
+00:03:12,270 --> 00:03:21,630
+‫Also important thing to note that ID and the class are also HTML attribute names, IDs and classes has
+
+33
+00:03:21,630 --> 00:03:28,930
+‫a special role in HTML structure because ID is a unique identifier of the web element and class is defined
+
+34
+00:03:28,930 --> 00:03:36,480
+‫the stylesheet, but it is also attribute names and we will talk about the special roles of ID and classes
+
+35
+00:03:36,480 --> 00:03:36,960
+‫later.
+
+36
+00:03:38,040 --> 00:03:44,820
+‫Also, a class name has a values and important to understand that these long class, for example, is
+
+37
+00:03:44,820 --> 00:03:46,480
+‫not one value.
+
+38
+00:03:46,500 --> 00:03:49,050
+‫This class has three different values.
+
+39
+00:03:49,440 --> 00:03:54,120
+‫Glossolalia number one, plus value number two and number three in full.
+
+40
+00:03:54,120 --> 00:04:01,150
+‫Waithe size medium in Chaib rectangle are three different class values and they are separated by this
+
+41
+00:04:01,150 --> 00:04:01,490
+‫space.
+
+42
+00:04:01,710 --> 00:04:08,970
+‫This is also important to know because you can use each of these class name, size, medium or shape
+
+43
+00:04:08,970 --> 00:04:13,050
+‫rectangle or as a separate locator by class name.
+
+44
+00:04:14,830 --> 00:04:19,310
+‫Next thing, let's talk about another example of HTML.
+
+45
+00:04:19,320 --> 00:04:24,690
+‫This is the code for Table, which has a table book body.
+
+46
+00:04:24,870 --> 00:04:29,190
+‫We have a three table rows one, two, three and four.
+
+47
+00:04:29,190 --> 00:04:30,450
+‫The first table row.
+
+48
+00:04:30,450 --> 00:04:34,560
+‫We have three columns as table down, one, two, three, four.
+
+49
+00:04:34,740 --> 00:04:44,100
+‫And let's talk about it as well as we talk before, each HTML tags usually has open index and close
+
+50
+00:04:44,100 --> 00:04:44,610
+‫index.
+
+51
+00:04:44,940 --> 00:04:53,250
+‫In this particular example for table column TD Tag has the closing tag at the end for the table or in
+
+52
+00:04:53,250 --> 00:04:54,090
+‫table body.
+
+53
+00:04:54,270 --> 00:04:57,870
+‫They are located in the bottom just because they are opened over here.
+
+54
+00:04:58,530 --> 00:04:59,580
+‫The values.
+
+55
+00:05:00,140 --> 00:05:06,240
+‫Between angle braces, in this example, one point eight m.b deer or five.
+
+56
+00:05:06,380 --> 00:05:08,540
+‫This is the regular text value.
+
+57
+00:05:08,630 --> 00:05:16,070
+‫So everything what you see on the Web page as a text usually located in between the angle braces.
+
+58
+00:05:16,430 --> 00:05:16,790
+‫Why?
+
+59
+00:05:16,790 --> 00:05:19,040
+‫I say usually because not always.
+
+60
+00:05:19,050 --> 00:05:26,030
+‫Sometimes this text can be hidden in the properties of the browser and we will talk about this later
+
+61
+00:05:26,030 --> 00:05:31,610
+‫and how to work with the properties and how to get the values and assertive values from the properties.
+
+62
+00:05:31,820 --> 00:05:39,140
+‫But in most of the cases, all the text you see on the webpage is located in between the angle basis
+
+63
+00:05:39,200 --> 00:05:40,520
+‫of HTML tags.
+
+64
+00:05:41,600 --> 00:05:47,030
+‫The small three dots means that there is some nested content inside.
+
+65
+00:05:47,240 --> 00:05:54,380
+‫And also you can understand by these small icon one, the small arrow turned right.
+
+66
+00:05:54,590 --> 00:05:59,000
+‫It means that some content is inside of this column.
+
+67
+00:05:59,000 --> 00:06:05,630
+‫And if you will click in the inspector in the chrome dev tools on this small icon, it will open for
+
+68
+00:06:05,630 --> 00:06:06,980
+‫you this content.
+
+69
+00:06:08,900 --> 00:06:12,860
+‫Also, let's talk about the relations between the Web elements.
+
+70
+00:06:12,860 --> 00:06:22,580
+‫Let's use this table roll with the first table row of our table as our key element, all elements located
+
+71
+00:06:22,580 --> 00:06:26,600
+‫above our key element, our parent elements.
+
+72
+00:06:26,840 --> 00:06:36,200
+‫So table body HTML tag is a parent element for table roll and all other elements which will be above
+
+73
+00:06:36,200 --> 00:06:40,040
+‫the table body and up will be parent elements.
+
+74
+00:06:41,420 --> 00:06:49,970
+‫All elements which are located inside of the table role are child elements in relation to table row
+
+75
+00:06:49,970 --> 00:06:51,440
+‫elements and everything.
+
+76
+00:06:51,440 --> 00:06:53,890
+‫What is inside of table role?
+
+77
+00:06:53,890 --> 00:06:59,090
+‫All elements which will go deep into the tree is considered a child elements.
+
+78
+00:07:00,700 --> 00:07:07,900
+‫Sibling elements are elements which are located in the same level of the structure, for example, these
+
+79
+00:07:07,900 --> 00:07:15,190
+‫table roles for roles, if you draw the straight vertical line, you will see that they're aligned and
+
+80
+00:07:15,190 --> 00:07:17,170
+‫they are siblings to each other.
+
+81
+00:07:17,560 --> 00:07:25,810
+‫We have four columns, table downs, which are siblings, and we have three table roles which are also
+
+82
+00:07:25,810 --> 00:07:27,520
+‫siblings to each others.
+
+83
+00:07:28,000 --> 00:07:35,740
+‫So this relation of Web elements to each other, you should really clear, understand and let's make
+
+84
+00:07:35,740 --> 00:07:38,830
+‫a quick summary of what we just discussed in this lesson.
+
+85
+00:07:39,810 --> 00:07:46,600
+‫HTML contains of HTML tags, HTML attributes and attribute values.
+
+86
+00:07:48,020 --> 00:07:55,460
+‫Class and Idy are also attribute names, despite they have a special role in the structure.
+
+87
+00:07:56,440 --> 00:08:05,020
+‫Glass attributes can have a several values in each value is separated by the space HTML tags usually
+
+88
+00:08:05,020 --> 00:08:08,080
+‫come in pairs of open and enclosed deck close.
+
+89
+00:08:08,080 --> 00:08:17,830
+‫Intec has the same name and forward slash value in between angle brackets is a plaintext elements above
+
+90
+00:08:17,830 --> 00:08:21,400
+‫the key web element are parent elements.
+
+91
+00:08:22,150 --> 00:08:28,810
+‫Elements inside of the key web element are child elements and elements placed at the same level.
+
+92
+00:08:29,410 --> 00:08:33,140
+‫Side by side are sibling elements to each other.
+
+93
+00:08:33,850 --> 00:08:35,530
+‫So this is pretty much it.
+
+94
+00:08:35,530 --> 00:08:41,470
+‫I hope it was useful and we will use all this information in all this knowledge in our next lesson,
+
+95
+00:08:41,500 --> 00:08:47,380
+‫where will we discuss how to build the locators and how to find the locators in the cypress?
+
+96
+00:08:47,650 --> 00:08:49,360
+‫So see you in the next lesson.
+

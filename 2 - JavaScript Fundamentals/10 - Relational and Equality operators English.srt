@@ -1,0 +1,436 @@
+﻿1
+00:00:10,410 --> 00:00:11,300
+‫Hello guys.
+
+2
+00:00:11,310 --> 00:00:17,250
+‫Welcome back to JavaScript Fundamentals Module, and in this lesson we will talk about relational and
+
+3
+00:00:17,250 --> 00:00:18,750
+‫equality operators.
+
+4
+00:00:18,750 --> 00:00:21,090
+‫So let's start with the relational one,
+
+5
+00:00:23,940 --> 00:00:27,300
+‫Relational or comparison
+
+6
+00:00:29,800 --> 00:00:31,800
+‫for operators.
+
+7
+00:00:32,190 --> 00:00:33,900
+‫This is also how they call comparison.
+
+8
+00:00:33,900 --> 00:00:36,090
+‫Let me list them first and I will show you examples.
+
+9
+00:00:36,090 --> 00:00:36,960
+‫One by one.
+
+10
+00:00:37,200 --> 00:00:42,150
+‫The first operator called more than
+
+11
+00:00:44,790 --> 00:00:47,760
+‫this one called Less than.
+
+12
+00:00:49,040 --> 00:00:51,830
+‫This one called more than
+
+13
+00:00:54,950 --> 00:00:59,840
+‫more than equal and
+
+14
+00:01:02,810 --> 00:01:06,440
+‫less than equal.
+
+15
+00:01:06,830 --> 00:01:10,640
+‫And now let me create a variable colored result.
+
+16
+00:01:11,540 --> 00:01:17,480
+‫And let's create a first relational or first comparison.
+
+17
+00:01:17,480 --> 00:01:23,250
+‫So let's say I want to say that ten is more than five.
+
+18
+00:01:23,270 --> 00:01:30,470
+‫Let's use first operator more than So with the relational operators, we comparing what is on the left
+
+19
+00:01:30,470 --> 00:01:32,750
+‫with what is on the right.
+
+20
+00:01:32,750 --> 00:01:35,870
+‫So this particular operator is making comparison.
+
+21
+00:01:35,870 --> 00:01:48,230
+‫If the value on the left more than value on the right and let's print the result console dot log we
+
+22
+00:01:48,230 --> 00:01:50,600
+‫print result in the console and execute
+
+23
+00:01:54,530 --> 00:01:55,130
+‫run it.
+
+24
+00:01:55,130 --> 00:01:58,180
+‫And what we see, we see the result as true.
+
+25
+00:01:58,190 --> 00:02:04,580
+‫So the result of relational operators, this is also logical operator will be always a boolean, so
+
+26
+00:02:04,580 --> 00:02:10,850
+‫it will going to return true or false by confirming us if the ten more than five or not.
+
+27
+00:02:10,850 --> 00:02:17,600
+‫And if for example I will put four is four more than five and run this one more time, we see the result.
+
+28
+00:02:17,600 --> 00:02:17,990
+‫All right.
+
+29
+00:02:17,990 --> 00:02:23,570
+‫This is false because definitely four is not more than five.
+
+30
+00:02:23,870 --> 00:02:25,490
+‫Four is less than five.
+
+31
+00:02:25,490 --> 00:02:26,780
+‫That's why it is false.
+
+32
+00:02:26,780 --> 00:02:34,250
+‫But if I will change my operator to this one, which is called less than in this example we compared
+
+33
+00:02:34,280 --> 00:02:37,130
+‫is for less than five.
+
+34
+00:02:37,130 --> 00:02:40,670
+‫And if we run this expression and this time it shows.
+
+35
+00:02:40,670 --> 00:02:44,450
+‫Yes, of course it is true because four is less than five.
+
+36
+00:02:45,260 --> 00:02:46,190
+‫Moving on.
+
+37
+00:02:46,190 --> 00:02:51,860
+‫So let's say if I would put is five less than five?
+
+38
+00:02:52,070 --> 00:03:01,760
+‫What we have the result is false and or if I put is five more than five run it again and false because
+
+39
+00:03:01,760 --> 00:03:05,930
+‫of course five is not more than five or not less than five.
+
+40
+00:03:05,930 --> 00:03:14,300
+‫Five is equal to five and in this example are useful operators like more than equal or less than equal.
+
+41
+00:03:14,300 --> 00:03:19,280
+‫So we're going to use expression like is five more than equal five.
+
+42
+00:03:19,280 --> 00:03:23,090
+‫And if I run this one more time, would we see yes, true.
+
+43
+00:03:23,090 --> 00:03:26,930
+‫So five is not more than five, but five is equal five.
+
+44
+00:03:26,930 --> 00:03:34,010
+‫So that's why the result of this overall comparison expression will be true if we all put six here and
+
+45
+00:03:34,010 --> 00:03:38,060
+‫we'll compare is six more than equal five and if we run it?
+
+46
+00:03:38,060 --> 00:03:42,230
+‫Yes, of course it's true, because six is more than five.
+
+47
+00:03:42,230 --> 00:03:47,150
+‫But if I put four and execute this one more time, what do I see?
+
+48
+00:03:47,150 --> 00:03:51,050
+‫I see false because four is less than five.
+
+49
+00:03:51,050 --> 00:03:53,990
+‫And of course four is not equal to five.
+
+50
+00:03:53,990 --> 00:03:57,410
+‫And that's why this expression is evaluated in false.
+
+51
+00:03:57,410 --> 00:04:03,920
+‫And the same way would be to work with less than if I will replace this one to this sign, which is
+
+52
+00:04:03,920 --> 00:04:05,000
+‫less than.
+
+53
+00:04:05,000 --> 00:04:08,150
+‫And then we'll run it and we'll see what we have.
+
+54
+00:04:08,150 --> 00:04:11,060
+‫True, because four is less than five.
+
+55
+00:04:11,090 --> 00:04:16,910
+‫If I will put five, it's going to be true again, because five is equal to five.
+
+56
+00:04:17,060 --> 00:04:24,830
+‫And if I will put six, we will have false because six is more than five.
+
+57
+00:04:24,830 --> 00:04:27,080
+‫That's why it is false.
+
+58
+00:04:27,080 --> 00:04:33,230
+‫So these comparison operators are used to drive your logic of the application flow.
+
+59
+00:04:33,230 --> 00:04:38,840
+‫So based on the data that you have, you want to execute this piece of code or that piece of code,
+
+60
+00:04:38,840 --> 00:04:44,030
+‫and you can derive this logic based on the comparison, based on the different condition, the different
+
+61
+00:04:44,030 --> 00:04:47,480
+‫branch of the code can be executed and how to manage this logic.
+
+62
+00:04:47,480 --> 00:04:50,300
+‫We're definitely going to talk about in the next lesson.
+
+63
+00:04:50,300 --> 00:04:54,200
+‫And let's also talk about equality operators
+
+64
+00:04:58,280 --> 00:05:01,730
+‫and for the convenience, let me create a new variable.
+
+65
+00:05:01,730 --> 00:05:09,650
+‫Let me call it just X and x is equal to one and now I print to the console two expressions right inside
+
+66
+00:05:09,650 --> 00:05:10,880
+‫of the console.
+
+67
+00:05:10,880 --> 00:05:21,590
+‫So I put X is equal to one and I put the second expression sorry console log console.log and I will
+
+68
+00:05:21,590 --> 00:05:35,630
+‫put second expression console dot log and x is equal equal equal to one and run this code.
+
+69
+00:05:35,630 --> 00:05:36,770
+‫Let's see what happened.
+
+70
+00:05:36,770 --> 00:05:38,180
+‫I'm going to command this.
+
+71
+00:05:38,840 --> 00:05:45,920
+‫So run this and execute and let's see what we have the first expression evaluated as true.
+
+72
+00:05:45,920 --> 00:05:48,260
+‫The second one is in false.
+
+73
+00:05:48,330 --> 00:05:49,470
+‫But what's the difference?
+
+74
+00:05:49,470 --> 00:05:51,240
+‫This one is true.
+
+75
+00:05:51,240 --> 00:05:52,680
+‫This one is false.
+
+76
+00:05:52,680 --> 00:05:58,020
+‫But both are comparing, Hey, X is equal to one and this one x is equal to one.
+
+77
+00:05:58,020 --> 00:06:03,330
+‫And we know that x is equal to one because we assigned one to our variable.
+
+78
+00:06:03,330 --> 00:06:04,860
+‫The difference is this one.
+
+79
+00:06:04,920 --> 00:06:11,430
+‫If we use double equal, we comparing the value on the left to the value on the right, and it's called
+
+80
+00:06:11,460 --> 00:06:14,550
+‫a loose comparison.
+
+81
+00:06:15,420 --> 00:06:21,480
+‫We do not compare the data type of the value, we just comparing the value itself.
+
+82
+00:06:21,480 --> 00:06:24,270
+‫This is one and this is one and they are the same.
+
+83
+00:06:24,270 --> 00:06:25,800
+‫So that's why it is true.
+
+84
+00:06:25,800 --> 00:06:30,960
+‫But when we use a triple equal sign, this is a strict comparison.
+
+85
+00:06:33,390 --> 00:06:40,350
+‫Strict comparison means that we are not only checking the value, but we also checking the data type
+
+86
+00:06:40,350 --> 00:06:41,250
+‫of the value.
+
+87
+00:06:41,250 --> 00:06:47,610
+‫In this example, one is a number, but in this example, one is a string, because it is in the single
+
+88
+00:06:47,610 --> 00:06:48,180
+‫quote.
+
+89
+00:06:48,180 --> 00:06:55,920
+‫So this expression will be evaluated as false because one as a number is not equal, as one as a string.
+
+90
+00:06:55,920 --> 00:06:57,030
+‫That's why it's false.
+
+91
+00:06:57,030 --> 00:07:03,900
+‫But if we will change it to this one equals to one and run it, and now everything works fine.
+
+92
+00:07:03,900 --> 00:07:06,390
+‫So this evaluation is evaluated in.
+
+93
+00:07:06,390 --> 00:07:07,020
+‫True.
+
+94
+00:07:07,230 --> 00:07:09,840
+‫So this is what the difference you need to know.
+
+95
+00:07:09,840 --> 00:07:12,930
+‫Double equal sign means it's a loose comparison.
+
+96
+00:07:12,930 --> 00:07:18,510
+‫If value on the left is equal to the value on the right without validation of the data type.
+
+97
+00:07:18,510 --> 00:07:24,840
+‫And the triple equals is more strict comparison when the value on the left should be equal by the value
+
+98
+00:07:24,840 --> 00:07:30,020
+‫to the right and the data type should be the same as the value on the left.
+
+99
+00:07:30,030 --> 00:07:30,420
+‫All right.
+
+100
+00:07:30,420 --> 00:07:33,150
+‫So let's quickly summarize what we learned in this lesson.
+
+101
+00:07:33,150 --> 00:07:39,960
+‫So relational or comparison operators are four types, more than less than more than equal and less
+
+102
+00:07:39,960 --> 00:07:40,740
+‫than equal.
+
+103
+00:07:40,740 --> 00:07:46,140
+‫The result of the relational and comparison operators will be always boolean, so it will return you
+
+104
+00:07:46,140 --> 00:07:51,330
+‫true or false when you use equality operators, there are two types.
+
+105
+00:07:51,330 --> 00:07:53,280
+‫Double equals is the loose comparison.
+
+106
+00:07:53,280 --> 00:08:00,360
+‫When we just comparing the value and the triple equals when we validating value and the data type and
+
+107
+00:08:00,360 --> 00:08:03,000
+‫the return result also will be a boolean.
+
+108
+00:08:03,570 --> 00:08:04,050
+‫All right.
+
+109
+00:08:04,050 --> 00:08:06,360
+‫Thank you, guys, and see you in the next lesson.
+
